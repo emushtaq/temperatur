@@ -3,3 +3,5 @@
 .pytest*
 *pycache*
 backend/.pytest*
+
+frontend/*node_modules*
