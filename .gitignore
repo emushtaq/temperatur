@@ -1,0 +1,5 @@
+.DS_Store
+.idea*
+.pytest*
+*pycache*
+backend/.pytest*
