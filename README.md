@@ -39,7 +39,7 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### TO-DO:
 - Improve validation and add test cases on the frontend 
-- Enhance error handling
+- Enhance error handling (both FE and BE)
 - Reduce image size (eg: package for production)
 - Try CD setup with actions 
 - Explore publishing and hosting in Heroku
