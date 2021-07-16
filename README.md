@@ -1,4 +1,7 @@
 # Temperatur - the temperature converter
+[![Node.js CI](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml)
+
+[![Python package](https://github.com/emushtaq/temperatur/actions/workflows/main.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/main.yml)
 
 A sample project running a React frontend applicatoin and a FastAPI backed python backend application. It is packaged using a `docker-compose.yml`.
 
@@ -43,6 +46,7 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### TO-DO:
 - Fix `Each child in a list should have a unique "key" prop` error on the FE.
+- Fix FE GitHub action
 - Improve validation and add more test cases 
 - Enhance error handling (both FE and BE)
 - Reduce image size (eg: package for production)
