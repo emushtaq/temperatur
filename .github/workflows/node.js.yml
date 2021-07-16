@@ -24,6 +24,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: Labeler
+        uses: actions/labeler@v3
+
 #     - uses: actions/checkout@v2
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
