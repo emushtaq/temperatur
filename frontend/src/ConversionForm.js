@@ -18,7 +18,7 @@ function ConversionForm(props) {
     }
 
     const handleSourceChange = (eventKey) => {
-        if(eventKey !== source) {
+        if (eventKey !== source) {
             setSource(eventKey);
             if (destination === eventKey) {
                 setDestination(units.filter(unit => unit !== eventKey)[0])
@@ -40,7 +40,11 @@ function ConversionForm(props) {
     const calculateConversion = () => {
         if (source != null && destination != null && value !== "") {
             get('http://localhost:8000/convert?source=' + source + '&destination=' + destination + '&value=' + value)
-                .then(response => setResult(response.data + 'º ' + destination));
+                .then(response => response.data)
+                .then(data => setResult(data + 'º ' + destination))
+                .catch(error => {
+                    alert(error);
+                });
         } else {
             setResult("Check the inputs");
         }
@@ -58,13 +62,14 @@ function ConversionForm(props) {
                     <div className={'element'}>
                         <label>
                             Enter the temperature:
-                            <input className={'temperatureInput'} type="number" value={value} onChange={handleChange}/> º
+                            <input className={'temperatureInput'} type="number" id="temperatureInput" value={value}
+                                   onChange={handleChange}/> º
                         </label>
                     </div>
                     <div className={'element'}>
                         <label>
                             Source temperature Unit: {source}
-                            <Dropdown onSelect={handleSourceChange} value={source}>
+                            <Dropdown onSelect={handleSourceChange} id="sourceUnit" value={source}>
                                 <Dropdown.Toggle variant="success" id="dropdown-source">
                                     Click to toggle unit
                                 </Dropdown.Toggle>
@@ -79,12 +84,12 @@ function ConversionForm(props) {
                     <div className={'element'}>
                         <label>
                             Unit for conversion: {destination}
-                            <Dropdown onSelect={handleDestinationChange} value={destination}>
+                            <Dropdown onSelect={handleDestinationChange} id="destinationUnit" value={destination}>
                                 <Dropdown.Toggle variant="success" id="dropdown-destination">
                                     Click to toggle unit
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    {units.filter(unit => unit!==source).map(unit => (
+                                    {units.filter(unit => unit !== source).map(unit => (
                                         <Dropdown.Item eventKey={unit}>{unitMap[unit]}</Dropdown.Item>
                                     ))}
                                 </Dropdown.Menu>
