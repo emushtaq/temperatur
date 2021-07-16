@@ -41,5 +41,5 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 - Improve validation and add test cases on the frontend 
 - Enhance error handling
 - Reduce image size (eg: package for production)
-- Try a CI/CD setup with actions 
+- Try CD setup with actions 
 - Explore publishing and hosting in Heroku
