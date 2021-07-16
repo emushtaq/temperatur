@@ -1,7 +1,9 @@
 # Temperatur - the temperature converter
-[![Node.js CI](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml)
+[![Frontend](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml)
 
-[![Python package](https://github.com/emushtaq/temperatur/actions/workflows/main.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/main.yml)
+[![Backend](https://github.com/emushtaq/temperatur/actions/workflows/main.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/main.yml)
+
+[![CI to Docker Hub (only tagged versions)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml/badge.svg?branch=v0.0.1)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml)
 
 A sample project running a React frontend applicatoin and a FastAPI backed python backend application. It is packaged using a `docker-compose.yml`.
 
@@ -32,6 +34,14 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
   - the backend should be up and running at http://localhost:80
   - Swagger UI based API docs are available on http://localhost:80/docs#/
 
+### CI:
+The following Github Actions are setup
+- [Python Backend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/main.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
+- [React Frontend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/node.js.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
+- [CI to Docker Hub](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/deploy_images.yml) Builds the FE and BE docker images and publishes them to Docker Hub. Triggered when commits are tagged with the format `v*.*.*`
+    - [Front end image](https://hub.docker.com/repository/docker/eshmeister/temperatur-frontend)
+    - [Back end image](https://hub.docker.com/repository/docker/eshmeister/temperatur-backend) 
+
 ### Tests:
 - Backend tests are located in the [Test folder](backend/app/test)
 - Frontend tests are located in the [Test file](frontend/src/App.test.js)
@@ -49,4 +59,4 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 - Improve validation and add more test cases 
 - Enhance error handling (both FE and BE)
 - Reduce image size (eg: package for production)
-- Try CD setup with actions 
+- Deploy on heroku
