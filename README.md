@@ -46,7 +46,6 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### TO-DO:
 - Fix `Each child in a list should have a unique "key" prop` error on the FE.
-- Fix FE GitHub action
 - Improve validation and add more test cases 
 - Enhance error handling (both FE and BE)
 - Reduce image size (eg: package for production)
