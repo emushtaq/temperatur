@@ -1,10 +1,4 @@
 # Temperatur - the temperature converter
-[![Frontend](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml)
-
-[![Backend](https://github.com/emushtaq/temperatur/actions/workflows/main.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/main.yml)
-
-[![CI to Docker Hub (only tagged versions)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml/badge.svg?branch=v0.0.1)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml)
-
 A sample project running a React frontend applicatoin and a FastAPI backed python backend application. It is packaged using a `docker-compose.yml`.
 
 ### To run the application with Docker (RECOMMENDED):
@@ -36,9 +30,17 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### CI:
 The following Github Actions are setup
-- [Python Backend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/main.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
-- [React Frontend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/node.js.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
-- [CI to Docker Hub](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/deploy_images.yml) Builds the FE and BE docker images and publishes them to Docker Hub. Triggered when commits are tagged with the format `v*.*.*`
+- [![Backend](https://github.com/emushtaq/temperatur/actions/workflows/main.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/main.yml)
+
+[Python Backend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/main.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
+- [![Frontend](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml/badge.svg)](https://github.com/emushtaq/temperatur/actions/workflows/node.js.yml)
+
+[React Frontend](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/node.js.yml) Builds and tests and backend application. Triggered on every push and PR to master branch
+- [![CI to Docker Hub (only tagged versions)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml/badge.svg?branch=v0.0.1)](https://github.com/emushtaq/temperatur/actions/workflows/deploy_images.yml)
+
+[CI to Docker Hub](https://github.com/emushtaq/temperatur/blob/master/.github/workflows/deploy_images.yml) Builds the FE and BE docker images and publishes them to Docker Hub. Triggered when commits are tagged with the format `v*.*.*`
+
+- Links to DockerHub Images
     - [Front end image](https://hub.docker.com/repository/docker/eshmeister/temperatur-frontend)
     - [Back end image](https://hub.docker.com/repository/docker/eshmeister/temperatur-backend) 
 
