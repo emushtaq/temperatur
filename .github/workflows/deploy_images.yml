@@ -1,8 +1,8 @@
 name: CI to Docker Hub
 
-on:
-  push:
-    branches: [ master ]
+on: push
+#   push:
+#     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
           context: ./backend
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/temperatur-fastAPI:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/temperatur-backend:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
