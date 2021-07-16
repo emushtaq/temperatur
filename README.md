@@ -31,6 +31,7 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### Tests:
 - Backend tests are located in the [Test folder](backend/app/test)
+- These tests are executed automatically using GitHub actions on every push. Runs can be viewed [here](https://github.com/emushtaq/temperatur/actions)
 - To run tests locally
   - ensure required environment is setup (as mentioned above in the running application locally - backend section)
   - cd backend
