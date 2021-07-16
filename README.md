@@ -31,15 +31,19 @@ A sample project running a React frontend applicatoin and a FastAPI backed pytho
 
 ### Tests:
 - Backend tests are located in the [Test folder](backend/app/test)
+- Frontend tests are located in the [Test file](frontend/src/App.test.js)
 - These tests are executed automatically using GitHub actions on every push. Runs can be viewed [here](https://github.com/emushtaq/temperatur/actions)
-- To run tests locally
+- To run backend tests locally
   - ensure required environment is setup (as mentioned above in the running application locally - backend section)
   - cd backend
   - execute the tests by running `pytest`. This will automatically pick up the test for the controller and the service layer and execute them.
+- To run frontend tests locally
+  - ensure required frontend dependencies are installed by running `cd frontend` & `npm install`
+  - `run npm test`
 
 ### TO-DO:
-- Improve validation and add test cases on the frontend 
+- Fix `Each child in a list should have a unique "key" prop` error on the FE.
+- Improve validation and add more test cases 
 - Enhance error handling (both FE and BE)
 - Reduce image size (eg: package for production)
 - Try CD setup with actions 
-- Explore publishing and hosting in Heroku
